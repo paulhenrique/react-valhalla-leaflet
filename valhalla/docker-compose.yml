@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  valhalla_gis-ops:
+    container_name: valhalla_gis-ops
+    image: gisops/valhalla:latest
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./custom_files:/custom_files
+    environment:
+      - build_elevation=True
+    #  - language=pt-BR
